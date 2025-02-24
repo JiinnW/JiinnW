@@ -6,15 +6,16 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
 Wish you a good day!
 
 
 Research Interests
 ======
-1
+* Data-driven Decision Making
+* Machine Learning Theory
+* Robust Optimization
+* Game Theory
 
-<!-- yy
 
 
 <!-- Working Paper
