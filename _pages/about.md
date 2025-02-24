@@ -11,7 +11,11 @@ Wish you a good day!
 
 Research Interests
 ======
-Data-driven Decision Making, Machine Learning Theory, Robust Optimization, Game Theory
+<!-- Data-driven Decision Making, Machine Learning Theory, Robust Optimization, Game Theory -->
+*Data-driven Decision Making
+*Machine Learning Theory
+*Robust Optimization
+*Game Theory
 
 
 
