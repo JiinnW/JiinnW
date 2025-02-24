@@ -1,18 +1,33 @@
 ---
 permalink: /
-title: "Jin's Website"
+title: "Jin's Page"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+Wish you a good day!
 
-Title 1
+
+Research Interests
 ======
-111
+- Data-driven Decision Making
+- Machine Learning Theory
+- Robust Optimization
+- Game Theory
 
 
-Subtitle 2
+
+Working Paper
+======
+
+Data-driven Decision Making
 ------
-111
+still working on it ...
+
+Robust Optimization
+------
+to be listed ...
+
+
 
