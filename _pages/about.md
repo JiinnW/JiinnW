@@ -1,12 +1,12 @@
 ---
 permalink: /
-title: "Jin's Page"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-Wish you a good day!
+I'm a first-year PhD student taking courses every week...
 
 
 Research Interests
