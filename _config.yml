@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Jin's Page"
+title                    : "My Page"
 title_separator          : "-"
-name                     : &name "Jin"
+name                     : &name "wj"
 description              : &description "personal description"
 url                      : https://JiinnW.github.io/JiinnW # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,11 +23,11 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Jin"
+  name             : #"wj"
   pronouns         : # example: "she/her"  
-  bio              : "PhD student in year 1"
-  location         : "Hong Kong"
-  employer         : "CUHK"
+  bio              : #"PhD student in year 1"
+  location         : #"Hong Kong"
+  employer         : #"CUHK"
   uri              : # URL
   email            : "xxx@link.cuhk.edu.org" 
 
