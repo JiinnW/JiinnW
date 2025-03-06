@@ -29,7 +29,7 @@ author:
   location         : #"Hong Kong"
   employer         : #"CUHK"
   uri              : # URL
-  email            : "xxx@link.cuhk.edu.org" 
+  email            : #"xxx@link.cuhk.edu.org" 
 
   # # Academic websites
   # arxiv            : # URL - Update with the correct link to your profile
