@@ -9,6 +9,8 @@ redirect_from:
 
 Hi, I'm a first year PhD student.
 
+#### I plan on attending nothing!
+
 ## Research Interests
 <!-- Data-driven Decision Making, Machine Learning Theory, Robust Optimization, Game Theory -->
 * Data-driven Decision Making
