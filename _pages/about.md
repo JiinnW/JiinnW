@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "A Toy Website"
+title: "Welcome to Jin's Zone!"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,8 +8,7 @@ redirect_from:
 ---
 
 
-Research Interests
-======
+## Research Interests
 <!-- Data-driven Decision Making, Machine Learning Theory, Robust Optimization, Game Theory -->
 * Data-driven Decision Making
 * Machine Learning Theory
