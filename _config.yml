@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "My Page"
+title                    : "Jin Wang"
 title_separator          : "-"
 name                     : &name "wj"
 description              : &description "personal description"
