@@ -7,6 +7,7 @@ redirect_from:
   - /about.html
 ---
 
+[links](https://jiinnw.github.io/JiinnW/page-archive/)
 
 ## Research Interests
 <!-- Data-driven Decision Making, Machine Learning Theory, Robust Optimization, Game Theory -->
