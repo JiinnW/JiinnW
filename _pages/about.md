@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-[links](https://jiinnw.github.io/JiinnW/page-archive/)
+Hi, I'm a first year PhD student.
 
 ## Research Interests
 <!-- Data-driven Decision Making, Machine Learning Theory, Robust Optimization, Game Theory -->
