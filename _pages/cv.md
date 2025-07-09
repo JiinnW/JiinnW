@@ -18,13 +18,14 @@ redirect_from:
 * Fall 2023: Research Asssistant
   * SRIBD
 
+* Fall 2022: Algorithm Engineer
+  * Meituan
+  * Duties included: Reconstructing 3D map
+  
 * Fall 2021: Data Scientist
   * Trend Micro
   * Duties includes: Classifying malware
 
-* Fall 2022: Algorithm Engineer
-  * Meituan
-  * Duties included: Reconstructing 3D map
   
 ## Teaching Assistant
 * Fall 2024: Statistics
