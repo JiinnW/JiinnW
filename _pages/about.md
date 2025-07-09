@@ -7,7 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm a first year PhD student.
+Hi, I'm a PhD student in operations management.
+I am interested in data-driven decision-making and robust optimization with applications in inventory management and mechanism design. 
 
 
 ## Research Interests

@@ -10,11 +10,14 @@ redirect_from:
 {% include base_path %}
 
 ## Education
-* Ph.D in xx, xx University, 2029 (expected)
-* M.S. in xx, xx University, 2024
-* B.S. in xx, xx University, 2021
+* Ph.D in Operations Management, The Chinese University of Hong Kong, 2029 (expected)
+* M.S. in Statistics, Nanjing University, 2023
+* B.S. in Physics and Math, Nankai University, 2021
 
 ## Internship experience
+* Fall 2023: Research Asssistant
+  * SRIBD
+
 * Fall 2021: Data Scientist
   * Trend Micro
   * Duties includes: Classifying malware
