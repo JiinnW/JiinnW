@@ -48,20 +48,32 @@ footer_scripts:
         font-weight: bold;
         color: #007bff;
     }
+    .total-counter {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+    .total-counter span {
+        color: #007bff;
+    }
 </style>
 
 <div class="interactive-buttons-container">
     <div class="button-wrapper">
         <button id="buttonLike" class="counter-btn">👍 点赞</button>
-        <p class="click-counter">已点击: <span id="countLike">0</span> 次</p>
+        <!-- <p class="click-counter">已点击: <span id="countLike">0</span> 次</p> -->
     </div>
     <div class="button-wrapper">
         <button id="buttonLove" class="counter-btn">👍👍 点赞</button>
-        <p class="click-counter">已点击: <span id="countLove">0</span> 次</p>
+        <!-- <p class="click-counter">已点击: <span id="countLove">0</span> 次</p> -->
     </div>
     <div class="button-wrapper">
         <button id="buttonStar" class="counter-btn">👍👍👍 点赞</button>
-        <p class="click-counter">已点击: <span id="countStar">0</span> 次</p>
+        <!-- <p class="click-counter">已点击: <span id="countStar">0</span> 次</p> -->
     </div>
 </div>
+
+<p class="total-counter">总赞数: <span id="countTotal">0</span> 次</p>
 <!-- 结束：交互式计数按钮 -->

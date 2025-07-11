@@ -46,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('countLike').textContent = counts.buttonLike || 0;
             document.getElementById('countLove').textContent = counts.buttonLove || 0;
             document.getElementById('countStar').textContent = counts.buttonStar || 0;
+            // Calculate and update total count
+            const totalCount = (counts.buttonLike || 0) + (counts.buttonLove || 0) + (counts.buttonStar || 0);
+            document.getElementById('countTotal').textContent = totalCount;
+
         } else {
             console.error("Firebase Error: Document not found!");
         }
