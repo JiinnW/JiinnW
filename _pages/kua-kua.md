@@ -63,15 +63,15 @@ footer_scripts:
 <div class="interactive-buttons-container">
     <div class="button-wrapper">
         <button id="buttonLike" class="counter-btn">👍 点赞</button>
-        <!-- <p class="click-counter">已点击: <span id="countLike">0</span> 次</p> -->
+        <p class="click-counter">已点击: <span id="countLike">0</span> 次</p>
     </div>
     <div class="button-wrapper">
         <button id="buttonLove" class="counter-btn">👍👍 点赞</button>
-        <!-- <p class="click-counter">已点击: <span id="countLove">0</span> 次</p> -->
+        <p class="click-counter">已点击: <span id="countLove">0</span> 次</p>
     </div>
     <div class="button-wrapper">
         <button id="buttonStar" class="counter-btn">👍👍👍 点赞</button>
-        <!-- <p class="click-counter">已点击: <span id="countStar">0</span> 次</p> -->
+        <p class="click-counter">已点击: <span id="countStar">0</span> 次</p>
     </div>
 </div>
 
