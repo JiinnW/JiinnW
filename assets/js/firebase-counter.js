@@ -1,5 +1,8 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js';
+import { getFirestore, collection, doc, onSnapshot, setDoc, updateDoc, increment } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Firebase 配置
+    // Firebase configuration
     const firebaseConfig = {
         apiKey: "AIzaSyDPfqHMdUPHPjtksXKRPmYDdhq-6s4y-e8",
         authDomain: "web-counting.firebaseapp.com",
@@ -10,17 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
         measurementId: "G-QV8FJTVMEX"
     };
 
-    // 初始化 Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
 
-    // Firestore 文档引用
-    const countersDocRef = db.collection('counters').doc('web-counting');
+    // Firestore document reference
+    const countersDocRef = doc(collection(db, 'counters'), 'web-counting');
 
-    // 初始化文档（如果不存在）
-    countersDocRef.get().then(doc => {
-        if (!doc.exists) {
-            countersDocRef.set({
+    // Initialize document if it doesn't exist
+    onSnapshot(countersDocRef, (docSnapshot) => {
+        if (!docSnapshot.exists()) {
+            setDoc(countersDocRef, {
                 buttonLike: 0,
                 buttonLove: 0,
                 buttonStar: 0
@@ -28,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Error initializing document:", error);
             });
         }
-    }).catch(error => {
+    }, error => {
         console.error("Error checking document:", error);
     });
 
-    // 实时监听计数数据
-    countersDocRef.onSnapshot(doc => {
-        if (doc.exists) {
-            const counts = doc.data();
+    // Real-time listener for counts
+    onSnapshot(countersDocRef, (docSnapshot) => {
+        if (docSnapshot.exists()) {
+            const counts = docSnapshot.data();
             document.getElementById('countLike').textContent = counts.buttonLike || 0;
             document.getElementById('countLove').textContent = counts.buttonLove || 0;
             document.getElementById('countStar').textContent = counts.buttonStar || 0;
@@ -46,16 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Error listening to Firestore:", error);
     });
 
-    // 为按钮绑定点击事件
+    // Bind click events to buttons
     function setupIncrement(buttonId, fieldToIncrement) {
         const button = document.getElementById(buttonId);
         if (button) {
-            button.addEventListener('click', () => {
-                countersDocRef.update({
-                    [fieldToIncrement]: firebase.firestore.FieldValue.increment(1)
-                }).catch(error => {
+            button.addEventListener('click', async () => {
+                try {
+                    await updateDoc(countersDocRef, {
+                        [fieldToIncrement]: increment(1)
+                    });
+                } catch (error) {
                     console.error(`Error incrementing ${fieldToIncrement}:`, error);
-                });
+                }
             });
         } else {
             console.error(`Button with ID ${buttonId} not found!`);
