@@ -2,7 +2,7 @@
 layout: archive
 permalink: /kua-kua/
 title: "Kua Kua"
-author_profile: true
+author_profile: false
 redirect_from:
 ---
 <!-- 开始：交互式计数按钮 -->
