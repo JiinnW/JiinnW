@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
+    // 1.是否连接成功
+
     // Firestore document reference
     const countersDocRef = doc(collection(db, 'counters'), 'web-counting');
 
@@ -35,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Error checking document:", error);
     });
 
+    // 2.需要确定数据是否写到数据库里了
+
     // Real-time listener for counts
     onSnapshot(countersDocRef, (docSnapshot) => {
         if (docSnapshot.exists()) {
@@ -50,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Bind click events to buttons
+
+    // 3.确保updateDoc是让数据库中的数据+1 并且后面拿到数据库更新的数据然后显示
     function setupIncrement(buttonId, fieldToIncrement) {
         const button = document.getElementById(buttonId);
         if (button) {
@@ -66,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(`Button with ID ${buttonId} not found!`);
         }
     }
+
 
     setupIncrement('buttonLike', 'buttonLike');
     setupIncrement('buttonLove', 'buttonLove');
