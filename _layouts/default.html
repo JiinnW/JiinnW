@@ -12,7 +12,6 @@ layout: compress
   </head>
 
   <body>
-
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
@@ -27,14 +26,11 @@ layout: compress
 
     {% include scripts.html %}
 
-    <!-- 在 </body> 标签前添加 -->
-
-    <!-- Firebase 核心库 -->
-    <script type_module src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
-    <!-- Firebase Firestore 数据库库 -->
-    <script type_module src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js"></script>
-
-    <!-- 其他脚本... -->
+    <!-- Firebase scripts with correct type="module" -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js"></script>
+    <!-- Load your custom Firebase script as a module -->
+    <script type="module" src="{{ base_path }}/assets/js/firebase-counter.js"></script>
 
   </body>
 </html>
