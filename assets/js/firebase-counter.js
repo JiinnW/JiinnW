@@ -1,26 +1,38 @@
-// 文件路径: /assets/js/firebase-counter.js
-// 这个版本假设您已经在 HTML 中通过 <script> 标签加载了 Firebase
-
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. 粘贴您自己的 Firebase 配置信息
+    // Firebase 配置
     const firebaseConfig = {
-    apiKey: "AIzaSyDPfqHMdUPHPjtksXKRPmYDdhq-6s4y-e8",
-    authDomain: "web-counting.firebaseapp.com",
-    projectId: "web-counting",
-    storageBucket: "web-counting.firebasestorage.app",
-    messagingSenderId: "140536989109",
-    appId: "1:140536989109:web:f73719a0522405ab67c5fc",
-    measurementId: "G-QV8FJTVMEX"
+        apiKey: "AIzaSyDPfqHMdUPHPjtksXKRPmYDdhq-6s4y-e8",
+        authDomain: "web-counting.firebaseapp.com",
+        projectId: "web-counting",
+        storageBucket: "web-counting.firebasestorage.app",
+        messagingSenderId: "140536989109",
+        appId: "1:140536989109:web:f73719a0522405ab67c5fc",
+        measurementId: "G-QV8FJTVMEX"
     };
 
-    // 2. 初始化 Firebase 应用和 Firestore 数据库
-    const app = firebase.initializeApp(firebaseConfig);
+    // 初始化 Firebase
+    firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
 
-    // 3. 指定数据库文档引用
+    // Firestore 文档引用
     const countersDocRef = db.collection('counters').doc('web-counting');
 
-    // 4. 实时监听数据
+    // 初始化文档（如果不存在）
+    countersDocRef.get().then(doc => {
+        if (!doc.exists) {
+            countersDocRef.set({
+                buttonLike: 0,
+                buttonLove: 0,
+                buttonStar: 0
+            }).catch(error => {
+                console.error("Error initializing document:", error);
+            });
+        }
+    }).catch(error => {
+        console.error("Error checking document:", error);
+    });
+
+    // 实时监听计数数据
     countersDocRef.onSnapshot(doc => {
         if (doc.exists) {
             const counts = doc.data();
@@ -30,17 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             console.error("Firebase Error: Document not found!");
         }
+    }, error => {
+        console.error("Error listening to Firestore:", error);
     });
 
-    // 5. 为按钮绑定点击事件
+    // 为按钮绑定点击事件
     function setupIncrement(buttonId, fieldToIncrement) {
         const button = document.getElementById(buttonId);
         if (button) {
             button.addEventListener('click', () => {
                 countersDocRef.update({
                     [fieldToIncrement]: firebase.firestore.FieldValue.increment(1)
+                }).catch(error => {
+                    console.error(`Error incrementing ${fieldToIncrement}:`, error);
                 });
             });
+        } else {
+            console.error(`Button with ID ${buttonId} not found!`);
         }
     }
 
