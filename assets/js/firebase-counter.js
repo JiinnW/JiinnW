@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', async () => {
                 try {
                     await updateDoc(countersDocRef, {
-                        [fieldToIncrement]: increment(1)
+                        // 如果是buttonLike, +1; 如果是buttonLove, +2; 如果是buttonStar, +3
+                        [fieldToIncrement]: increment(fieldToIncrement === 'buttonLove' ? 2 : fieldToIncrement === 'buttonStar' ? 3 : 1)
                     });
                 } catch (error) {
                     console.error(`Error incrementing ${fieldToIncrement}:`, error);
