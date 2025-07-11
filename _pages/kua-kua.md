@@ -7,7 +7,7 @@ footer_scripts:
   - /assets/js/firebase-counter.js 
 ---
 <!-- 开始：交互式计数按钮 -->
-<!-- <style>
+<style>
     /* 为按钮容器提供一些样式 */
     .interactive-buttons-container {
         display: flex;
@@ -115,5 +115,5 @@ footer_scripts:
         setupCounter('buttonStar', 'countStar');
 
     });
-</script> -->
+</script>
 <!-- 结束：交互式计数按钮 -->
