@@ -3,7 +3,8 @@ layout: archive
 permalink: /kua-kua/
 title: "Kua Kua"
 author_profile: false
-redirect_from:
+footer_scripts:
+  - /assets/js/firebase-counter.js 
 ---
 <!-- 开始：交互式计数按钮 -->
 <style>
